@@ -1,7 +1,5 @@
-MyInvest - Backend
+Tyche Invest - Backend
 ===
 
-- [ ] CRUD Accounts
-- [ ] CRD IncomeAlloc
-- [ ] CRUD Assets
-- [ ] CRD AssetValues
+Tyche 는 행복과 운명의 여신입니다. Tyche Invest 는 나의 자산을 제대로 관리함으로써 노후가 행복해지는 미래를 그릴 수 있게 만들어 줍니다. Tyche Invest 를 통해 고정수입을 나의 여러계좌에 정해진 비율대로 분산하는 것을 시뮬레이션하고, 모든자산을 등록하여 내가 정한 카테고리대로 포트폴리오 현황을 파악하세요. 이 시스템은 고정수입 분배 시뮬레이션, 자산현황, 비실시간 주가연동 기능을 제공합니다.
+
