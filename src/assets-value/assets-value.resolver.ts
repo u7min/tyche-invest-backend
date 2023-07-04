@@ -39,7 +39,7 @@ export class AssetsValueResolver {
 
   @Role(['Any'])
   @Query(() => AllAssetValuesOutput)
-  findAllAssetValues(
+  allAssetValues(
     @AuthUser() authUser,
     @Args('input') input: AllAssetValuesInput,
   ) {

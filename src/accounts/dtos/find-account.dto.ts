@@ -3,13 +3,13 @@ import { CoreOutput } from '../../common/dtos/output.dto';
 import { Account } from '../entities/account.entity';
 
 @ArgsType()
-export class FindAccountInput {
+export class AccountInput {
   @Field(() => Number)
   accountId: number;
 }
 
 @ObjectType()
-export class FindAccountOutput extends CoreOutput {
+export class AccountOutput extends CoreOutput {
   @Field(() => Account, { nullable: true })
   account?: Account;
 }

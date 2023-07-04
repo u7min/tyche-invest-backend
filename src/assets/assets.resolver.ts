@@ -40,7 +40,7 @@ export class AssetsResolver {
 
   @Role(['Any'])
   @Query(() => AllAssetsOutput)
-  findAllAssets(@AuthUser() authUser): Promise<AllAssetsOutput> {
+  allAssets(@AuthUser() authUser): Promise<AllAssetsOutput> {
     return this.assetsService.findAll(authUser);
   }
 }

@@ -12,7 +12,7 @@ export class CategoriesResolver {
 
   @Role(['Any'])
   @Query(() => AllCategoriesOutput)
-  findAllCategories(
+  allCategories(
     @Args('input') input: AllCategoriesInput,
   ): Promise<AllCategoriesOutput> {
     return this.categoriesService.findAllCategories(input);

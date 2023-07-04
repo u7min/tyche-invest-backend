@@ -39,7 +39,7 @@ export class IncomeAllocResolver {
 
   @Role(['Any'])
   @Query(() => AllIncomeAllocsOutput)
-  findAllAllocations(
+  allAllocations(
     @AuthUser() authUser,
     @Args('input') input: AllIncomeAllocsInput,
   ): Promise<AllIncomeAllocsOutput> {

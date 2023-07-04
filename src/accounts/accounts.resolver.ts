@@ -12,7 +12,7 @@ import {
   DeleteAccountInput,
   DeleteAccountOutput,
 } from './dtos/delete-account.dto';
-import { FindAccountInput, FindAccountOutput } from './dtos/find-account.dto';
+import { AccountInput, AccountOutput } from './dtos/find-account.dto';
 import { AllAccountsInput, AllAccountsOutput } from './dtos/all-accounts.dto';
 import { AuthUser } from '../auth/auth-user.decorator';
 import { Role } from '../auth/role.decorator';
@@ -49,17 +49,17 @@ export class AccountsResolver {
   }
 
   @Role(['Any'])
-  @Query(() => FindAccountOutput)
-  findAccount(
+  @Query(() => AccountOutput)
+  account(
     @AuthUser() authUser,
-    @Args() { accountId }: FindAccountInput,
-  ): Promise<FindAccountOutput> {
+    @Args() { accountId }: AccountInput,
+  ): Promise<AccountOutput> {
     return this.accountsService.findOne(authUser, accountId);
   }
 
   @Role(['Any'])
   @Query(() => AllAccountsOutput)
-  findAllAccounts(
+  allAccounts(
     @AuthUser() authUser,
     @Args('input') {}: AllAccountsInput,
   ): Promise<AllAccountsOutput> {

@@ -12,7 +12,7 @@ import {
   UpdateAccountOutput,
 } from './dtos/update-account.dto';
 import { AllAccountsOutput } from './dtos/all-accounts.dto';
-import { FindAccountOutput } from './dtos/find-account.dto';
+import { AccountOutput } from './dtos/find-account.dto';
 import { DeleteAccountOutput } from './dtos/delete-account.dto';
 
 @Injectable()
@@ -81,7 +81,7 @@ export class AccountsService {
     }
   }
 
-  async findOne(user: User, accountId: number): Promise<FindAccountOutput> {
+  async findOne(user: User, accountId: number): Promise<AccountOutput> {
     try {
       const account = await this.accounts.findOneOrFail({
         id: accountId,
